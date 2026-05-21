@@ -1,4 +1,0 @@
-Subsample,N,C3_AME,C3_SE,C3_pvalue,C3_CI_lower,C3_CI_upper,PseudoR2,LogLik
-Zone 1 (Central Commercial),98,0.0859,0.0888,0.3335,-0.0882,0.2601,0.1689,-43.38
-Zone 2 (Secondary Street),100,0.0394,0.0957,0.6808,-0.1483,0.227,0.193,-43.52
-Zone 3 (Neighbourhood),102,0.0,0.0,0.7754,-0.0001,0.0001,0.4642,-19.79

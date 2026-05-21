@@ -1,8 +1,0 @@
-theme_code,count,pct,theme_label,theory_link,instrument_link
-TAX_ANXIETY,64,21.3,Tax / Audit Anxiety,Allingham and Sandmo (1972); Kleven et al. (2011),"D7, C4, C6"
-PROCESS_COMPLEXITY,59,19.7,Registration Process Complexity,Venkatesh and Davis (2000) — perceived ease of use,"D3, D4"
-CUSTOMER_DEMAND,58,19.3,Low Customer Demand / Cash Preference,Jack and Suri (2011) — coordination failure,"D6, D11"
-POSITIVE_NUDGE,34,11.3,Positive Nudge / Already Adopted,Slemrod (2019) — communication effectiveness,"B6, C7, C8"
-INFRASTRUCTURE,34,11.3,Infrastructure Barrier,Ozili (2020) — digital infrastructure,"D1, D2"
-COST_BARRIER,28,9.3,Fee / Cost Barrier,Financial inclusion cost barriers,D5
-SMALL_SCALE,23,7.7,Small Scale / Not Worthwhile,TAM — perceived usefulness,D9
