@@ -1,0 +1,301 @@
+respondent_id,F1_text,theme_code,theme_label,reasoning,error
+KHT-0001,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0002,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0003,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0004,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0005,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0006,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0007,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0008,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0009,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0010,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0011,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0012,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0013,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0014,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0015,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0016,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0017,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0018,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0019,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0020,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0021,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0022,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0023,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0024,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0025,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0026,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0027,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0028,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0029,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0030,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0031,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0032,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0033,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0034,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0035,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0036,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0037,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0038,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0039,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0040,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0041,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0042,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0043,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0044,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0045,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0046,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0047,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0048,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0049,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0050,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0051,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0052,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0053,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0054,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0055,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0056,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0057,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0058,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0059,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0060,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0061,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0062,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0063,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0064,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0065,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0066,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0067,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0068,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0069,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0070,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0071,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0072,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0073,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0074,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0075,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0076,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0077,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0078,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0079,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0080,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0081,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0082,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0083,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0084,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0085,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0086,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0087,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0088,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0089,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0090,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0091,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0092,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0093,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0094,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0095,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0096,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0097,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0098,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0099,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0100,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0101,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0102,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0103,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0104,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0105,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0106,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0107,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0108,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0109,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0110,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0111,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0112,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0113,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0114,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0115,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0116,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0117,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0118,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0119,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0120,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0121,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0122,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0123,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0124,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0125,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0126,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0127,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0128,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0129,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0130,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0131,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0132,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0133,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0134,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0135,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0136,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0137,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0138,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0139,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0140,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0141,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0142,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0143,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0144,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0145,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0146,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0147,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0148,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0149,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0150,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0151,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0152,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0153,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0154,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0155,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0156,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0157,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0158,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0159,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0160,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0161,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0162,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0163,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0164,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0165,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0166,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0167,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0168,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0169,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0170,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0171,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0172,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0173,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0174,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0175,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0176,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0177,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0178,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0179,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0180,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0181,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0182,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0183,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0184,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0185,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0186,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0187,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0188,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0189,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0190,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0191,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0192,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0193,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0194,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0195,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0196,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0197,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0198,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0199,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0200,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0201,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0202,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0203,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0204,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0205,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0206,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0207,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0208,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0209,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0210,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0211,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0212,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0213,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0214,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0215,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0216,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0217,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0218,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0219,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0220,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0221,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0222,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0223,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0224,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0225,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0226,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0227,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0228,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0229,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0230,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0231,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0232,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0233,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0234,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0235,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0236,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0237,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0238,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0239,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0240,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0241,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0242,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0243,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0244,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0245,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0246,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0247,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0248,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0249,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0250,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0251,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0252,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0253,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0254,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0255,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0256,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0257,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0258,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0259,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0260,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0261,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0262,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0263,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0264,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0265,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0266,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0267,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0268,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0269,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0270,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0271,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0272,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0273,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0274,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0275,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0276,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0277,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0278,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0279,Mere grahak cash hi dete hain,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0280,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0281,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0282,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0283,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0284,Sab log cash mein karte hain toh main kyun badulon?,CUSTOMER_DEMAND,Low Customer Demand / Cash Preference,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0285,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0286,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0287,Darr hai ke FBR aa jaye ga,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0288,Hamari dukan chhoti hai digital ki zaroorat nahi,SMALL_SCALE,Small Scale / Not Worthwhile,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0289,Fees zyada hain wallets ki,COST_BARRIER,Fee / Cost Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0290,Registration ka tareeqa bohat mushkil lagta hai,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0291,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0292,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0293,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0294,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0295,Internet sahi nahi hota yahan,INFRASTRUCTURE,Infrastructure Barrier,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0296,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0297,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0298,Jab safe harbour ka pata chala to main ne register kar liya,POSITIVE_NUDGE,Positive Nudge / Already Adopted,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0299,Mujhe pata nahi tha ke kaise register karein,PROCESS_COMPLEXITY,Registration Process Complexity,Rule-based fallback (no API key),No API key — rule-based coding used
+KHT-0300,Paisa account mein aata hai toh KPRA dekh leta hai,TAX_ANXIETY,Tax / Audit Anxiety,Rule-based fallback (no API key),No API key — rule-based coding used

@@ -1,0 +1,13 @@
+Variable,Coefficient,SE,t,p_value
+const,3.6661,0.3359,10.913,0.0
+C3_safe_harbour_aware,-0.8549,0.1526,-5.601,0.0
+zone1,-0.3945,0.1557,-2.533,0.0113
+zone2,-0.1012,0.1357,-0.746,0.4556
+vendor_food,-0.2973,0.1231,-2.414,0.0158
+A3_years_operating,-0.1056,0.0555,-1.902,0.0571
+A4_daily_revenue,-0.0461,0.0629,-0.733,0.4639
+has_bank_account,-0.0901,0.1233,-0.731,0.4651
+has_mobile_wallet,0.1993,0.1317,1.514,0.13
+has_smartphone,0.1223,0.1187,1.03,0.303
+customer_demand_share,-0.0942,0.3287,-0.287,0.7744
+D12_peer_will_register,0.0318,0.0501,0.636,0.525

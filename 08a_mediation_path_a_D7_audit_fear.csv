@@ -1,0 +1,149 @@
+# Codebook — SME Digital Payment Adoption, Kohat District 2026
+# Digital Payment Mandates and SME Financial Inclusion in KP
+# Dr. Yasir Saeed, KUST ORIC Research Grant 2025-26
+#
+# This codebook covers every variable in the analysis dataset.
+# Column order matches the survey instrument sections A through F.
+# Analytical roles are stated for each variable.
+
+---
+
+## Identifiers
+
+| Variable          | Type    | Description                          |
+|-------------------|---------|--------------------------------------|
+| respondent_id     | string  | Unique ID (format KHT-NNNN)          |
+
+---
+
+## Section A — Trader Profile
+
+| Variable          | Type    | Codes / Range                                                               | Analytical Role        |
+|-------------------|---------|-----------------------------------------------------------------------------|------------------------|
+| A1_zone           | ordinal | 1=Zone 1 Central; 2=Zone 2 Secondary; 3=Zone 3 Neighbourhood               | Stratification FE      |
+| A2_business_type  | nominal | 1=Food/Grocery; 2=Clothing; 3=Hardware; 4=Pharmacy; 5=Services; 6=Other    | Vendor type source     |
+| A3_years_operating| ordinal | 1=<2yr; 2=2-5yr; 3=5-10yr; 4=>10yr                                         | Control                |
+| A4_daily_revenue  | ordinal | 1=<2000; 2=2000-5000; 3=5000-15000; 4=>15000 PKR                           | Control                |
+| A5_employees      | numeric | 1/2/3/4/5+                                                                  | Descriptive only       |
+| A6_bank_account   | nominal | 1=Active; 2=Dormant; 3=None                                                 | Financial access proxy |
+| A7_mobile_wallet  | nominal | 1=Regular; 2=Rarely; 3=None                                                 | Digital experience     |
+| A8_smartphone     | nominal | 1=Yes; 2=Basic phone; 3=None                                                | Tech access proxy      |
+
+**Derived from Section A:**
+
+| Variable          | Type    | Derivation                                                | Analytical Role         |
+|-------------------|---------|-----------------------------------------------------------|-------------------------|
+| vendor_food       | binary  | 1 if A2_business_type==1; 0 otherwise                    | Vendor category control |
+| has_bank_account  | binary  | 1 if A6_bank_account==1; 0 otherwise                     | Financial access control|
+| has_mobile_wallet | binary  | 1 if A7_mobile_wallet==1; 0 otherwise                    | Digital exp. control    |
+| has_smartphone    | binary  | 1 if A8_smartphone==1; 0 otherwise                       | Tech access control     |
+
+---
+
+## Section B — Digital Payment Status
+
+| Variable              | Type    | Codes / Range                                              | Analytical Role              |
+|-----------------------|---------|------------------------------------------------------------|------------------------------|
+| B1a_qr_display        | binary  | 1=Yes (displays QR); 0=No                                  | Filter / descriptive         |
+| B1b_qr_registered     | ordinal | 1=Formally registered; 2=Not registered; 3=Not sure        | Source of primary DV         |
+| B1b_registered_binary | binary  | 1 if B1b_qr_registered==1; 0 otherwise (NaN→0)            | PRIMARY DEPENDENT VARIABLE   |
+| B2_provider           | nominal | 1=Paymir; 2=EasyPaisa; 3=JazzCash; 4=Bank; 5=Other        | Descriptive                  |
+| B3_daily_customers    | ordinal | 1=None; 2=1-3; 3=4-10; 4=>10                              | Descriptive                  |
+| B4_no_qr_situation    | ordinal | 1=Applied; 2=Plan soon; 3=No plan; 4=Unaware               | Conditional on B1a=0         |
+| B5_received_digital   | ordinal | 1=Regularly; 2=Occasionally; 3=Never                       | Descriptive / control        |
+| B6_inspected          | binary  | 1=Yes contacted; 2=No                                      | KPRA exposure proxy          |
+
+---
+
+## Section C — Policy Awareness and Perceptions
+
+| Variable                    | Type    | Codes / Range                                                       | Analytical Role              |
+|-----------------------------|---------|---------------------------------------------------------------------|------------------------------|
+| C1_cashless_kp_awareness    | ordinal | 1=Know well; 2=Heard not sure; 3=Never heard                        | Programme awareness baseline |
+| C2_mandate_awareness        | ordinal | 1=Aware; 2=Not aware; 3=Not sure                                    | Mandate awareness baseline   |
+| C3_safe_harbour_aware       | binary  | 1=Correct answer (option b); 0=Incorrect                            | KEY INDEPENDENT VARIABLE     |
+| C4_tax_burden_belief        | Likert  | 1=Strongly agree harm; 5=Strongly disagree                          | Secondary mediator           |
+| C5_payment_trust            | Likert  | 1=No trust; 5=Complete trust                                        | Perception control           |
+| C6_record_fear              | Likert  | 1=Strongly agree records will be used; 5=Strongly disagree          | Tax anxiety perception       |
+| C7_training_received        | ordinal | 1=Formal; 2=Print; 3=Verbal; 4=Nothing                             | Outreach exposure            |
+| C8_would_register_if_no_tax | ordinal | 1=Definitely yes; 5=Definitely no                                   | Hypothetical willingness     |
+| C9_dispute_resolution_aware | binary  | 1=Correct; 0=Incorrect                                              | Secondary awareness IV       |
+
+---
+
+## Section D — Barriers to Adoption (Likert 1-5)
+
+All D1-D10 items: 1=Not a barrier at all, 5=Major barrier
+
+| Variable                    | Factor Hypothesis        | Analytical Role             |
+|-----------------------------|--------------------------|-----------------------------|
+| D1_no_smartphone            | Infrastructure factor    | Barrier item / factor input |
+| D2_internet_unreliable      | Infrastructure factor    | Barrier item / factor input |
+| D3_dont_know_how            | Information factor       | Barrier item / factor input |
+| D4_process_complex          | Information factor       | Barrier item / factor input |
+| D5_fees_high                | Cost factor              | Barrier item / factor input |
+| D6_customers_prefer_cash    | Demand factor            | Barrier item / factor input |
+| D7_audit_fear               | Tax anxiety factor       | Primary mediator            |
+| D8_distrust_safety          | Trust factor             | Barrier item / factor input |
+| D9_amounts_too_small        | Demand factor            | Barrier item / factor input |
+| D10_no_peer_pressure        | Coordination factor      | Barrier item / factor input |
+
+**Coordination Wedge Items:**
+
+| Variable              | Type    | Codes / Range                                               | Analytical Role          |
+|-----------------------|---------|-------------------------------------------------------------|--------------------------|
+| D11_customer_demand_est | numeric | 0-10 (number of 10 customers expected to pay digitally)  | Coordination wedge IV    |
+| D12_peer_will_register  | ordinal | 1=Definitely most; 5=Definitely none                      | Social norm IV           |
+
+**Derived from Section D:**
+
+| Variable                | Derivation                               |
+|-------------------------|------------------------------------------|
+| customer_demand_share   | D11_customer_demand_est / 10.0           |
+| tax_anxiety             | Alias for D7_audit_fear (primary mediator)|
+| factor_1 ... factor_4   | Factor scores from varimax FA on D1-D10  |
+
+---
+
+## Section E — Willingness to Adopt and Policy Preferences
+
+| Variable                | Type    | Codes / Range                                                   | Analytical Role            |
+|-------------------------|---------|-----------------------------------------------------------------|----------------------------|
+| E1_willingness          | ordinal | 1=Not willing; 5=Very willing                                   | SECONDARY DEPENDENT VARIABLE (ordered logit) |
+| E2_pref_1, E2_pref_2    | nominal | 1-7 (see instrument)                                            | Descriptive / policy        |
+| E3_paymir_awareness     | ordinal | 1=Using; 2=Heard not using; 3=Not heard                        | Programme awareness         |
+| E4_cash_incentive_effect| ordinal | 1=Definitely yes; 5=Already registered                         | Policy preference           |
+| E5_trusted_info_source  | nominal | 1=Traders assoc; 2=Bank; 3=Wallet agent; 4=Govt; 5-7=other    | Channel targeting           |
+| E6_followup_consent     | binary  | 1=Yes; 2=No                                                     | Panel follow-up             |
+
+---
+
+## Section F — Open-Ended
+
+| Variable    | Type   | Content                                          | Analytical Role                     |
+|-------------|--------|--------------------------------------------------|-------------------------------------|
+| F1_open_ended | text | Trader's own words on primary adoption barrier  | AI-assisted qualitative thematic coding |
+
+---
+
+## Zone Dummy Variables (created in scripts)
+
+| Variable  | Derivation            | Reference category |
+|-----------|-----------------------|--------------------|
+| zone1     | 1 if A1_zone==1       | Zone 3             |
+| zone2     | 1 if A1_zone==2       | Zone 3             |
+| zone1_food| zone1 × vendor_food   | Interaction term   |
+| zone2_food| zone2 × vendor_food   | Interaction term   |
+
+---
+
+## Notes on Missing Values
+
+B1b_qr_registered and related B-section items are conditionally missing based on B1a skip rule.
+B1b_registered_binary codes all NaN as 0 (not registered).
+Analysts should verify that this imputation rule is appropriate for their sub-question.
+All analytical scripts drop rows with missing values on the dependent variable before estimation.
+
+---
+
+End of codebook. Dr. Yasir Saeed, Department of Economics, KUST, Kohat.

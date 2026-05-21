@@ -1,0 +1,16 @@
+Variable,VIF
+C3_safe_harbour_aware,1.631
+zone1,2.647
+zone2,2.78
+vendor_food,4.003
+zone1_food,2.604
+zone2_food,2.911
+experience,6.766
+revenue_cat,6.421
+has_bank_account,1.608
+has_mobile_wallet,1.616
+has_smartphone,2.498
+tax_anxiety,8.004
+payment_trust,6.301
+customer_demand_share,3.348
+peer_norm,9.015

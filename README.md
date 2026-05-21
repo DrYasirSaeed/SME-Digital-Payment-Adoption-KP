@@ -1,180 +1,246 @@
-# Digital Payment Mandates and SME Financial Inclusion in KP
+"""
+06_mediation.py
+Step 8: Mediation analysis — C3 safe harbour awareness → tax anxiety (C4, D7) → B1b registration
 
-**Evidence from the Cashless Khyber Pakhtunkhwa Initiative**
+Tests whether the C3 effect on formal registration operates through the tax anxiety channel.
+Uses the product-of-coefficients method (Baron and Kenny pathway verification +
+bootstrapped indirect effects via scipy).
 
----
+Pathway:
+  a: C3 → tax_anxiety (OLS, since mediator is ordinal Likert)
+  b: tax_anxiety → B1b | C3 (probit, treating mediator as continuous)
+  c: C3 → B1b (total probit effect)
+  c': C3 → B1b | tax_anxiety (direct effect probit)
+  indirect = a × b (product of coefficients)
 
-## Overview
+Bootstrap 95% CI on indirect effect confirms mediation.
 
-This repository contains the replication code, codebook, and data dictionary for the research project:
+Digital Payment Mandates and SME Financial Inclusion in KP
+Dr. Yasir Saeed, KUST ORIC Research Grant 2025-26
 
-> **Digital Payment Mandates and SME Financial Inclusion: Evidence from the Cashless Khyber Pakhtunkhwa Initiative**
->
-> Dr. Yasir Saeed, Department of Economics, Kohat University of Science and Technology (KUST), Kohat, KP, Pakistan.
+Outputs
+-------
+outputs/tables/08a_mediation_path_a.csv
+outputs/tables/08b_mediation_path_c.csv
+outputs/tables/08c_mediation_path_c_prime.csv
+outputs/tables/08d_mediation_summary.csv
+outputs/figures/08_mediation_diagram.png
+"""
 
-The study examines the determinants of QR code adoption among small and informal traders in Kohat district, with a particular focus on measuring awareness of the two-year safe harbour provision in the Khyber Pakhtunkhwa Digital Payments Act 2026 (passed unanimously by the KP Provincial Assembly on April 6, 2026). The provision protects newly registered traders from new direct sales tax liability for two years after QR code registration — a policy instrument designed to neutralise tax anxiety as a barrier to formalisation.
+import pandas as pd
+import numpy as np
+import statsmodels.api as sm
+from statsmodels.discrete.discrete_model import Probit
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+from matplotlib.patches import FancyArrowPatch
+import os
 
----
+os.makedirs("outputs/tables", exist_ok=True)
+os.makedirs("outputs/figures", exist_ok=True)
 
-## Research Context
+np.random.seed(42)
+N_BOOT = 1000
 
-| Item | Detail |
-|---|---|
-| Funding | KUST Office of Research, Innovation and Commercialization (ORIC), Research Grant Award 2025–26 |
-| Grant Category | Lecturer |
-| Principal Investigator | Dr. Yasir Saeed |
-| Affiliation | Department of Economics, KUST, Kohat |
-| Contact | yasirsaeed@kust.edu.pk |
-| Study Area | Kohat District, Khyber Pakhtunkhwa, Pakistan |
-| Sample Size | 300 traders |
-| Sample Design | 3×2 purposive stratified (3 market types × 2 vendor categories) |
-| Field Period | Project Months 3–5 (post-EIRB approval) |
-| Policy Context | KP Digital Payments Act 2026; Cashless KP Programme (March 2025–) |
+df = pd.read_csv("data/hypothetical_survey_data.csv").dropna(subset=["B1b_registered_binary"])
+df["customer_demand_share"] = df["D11_customer_demand_est"] / 10.0
+df["zone1"] = (df["A1_zone"] == 1).astype(int)
+df["zone2"] = (df["A1_zone"] == 2).astype(int)
 
----
+# Two mediators tested: D7 (audit fear barrier) and C4 (tax burden belief)
+# Primary mediator: D7_audit_fear (structural barrier item, pre-specified)
+# Secondary mediator: C4_tax_burden_belief (perception item)
 
-## Research Questions
+CONTROLS = ["zone1", "zone2", "vendor_food",
+            "A3_years_operating", "A4_daily_revenue",
+            "has_bank_account", "has_mobile_wallet", "has_smartphone",
+            "customer_demand_share", "D12_peer_will_register"]
 
-1. What is the current level of QR code registration and safe harbour awareness among Kohat traders, disaggregated by market type and vendor category?
-2. What demand-side and supply-side barriers prevent informal traders from adopting QR-based digital payments, and do these barriers differ by vendor type?
-3. Does safe harbour awareness reduce tax anxiety perceptions, and does this reduction translate into higher current registration and stated willingness to adopt?
-4. What are the policy implications for KPRA and KPITB on awareness campaign design, registration simplification, and enforcement sequencing?
 
----
+def mediation_analysis(df, mediator_col, mediator_label):
+    print(f"\n{'='*60}")
+    print(f"Mediation via {mediator_col} ({mediator_label})")
+    print(f"{'='*60}")
 
-## Theoretical Framework
+    sub = df.dropna(subset=[mediator_col, "B1b_registered_binary", "C3_safe_harbour_aware"] + CONTROLS)
 
-The study integrates three theoretical strands:
+    # PATH a: C3 → mediator (OLS)
+    Xa = sm.add_constant(sub[["C3_safe_harbour_aware"] + CONTROLS])
+    Ma = sm.OLS(sub[mediator_col].astype(float), Xa).fit(cov_type="HC1")
+    a_coef = Ma.params["C3_safe_harbour_aware"]
+    a_se = Ma.bse["C3_safe_harbour_aware"]
+    a_p = Ma.pvalues["C3_safe_harbour_aware"]
+    print(f"\nPath a (C3 → {mediator_col}): coef={a_coef:.4f}, SE={a_se:.4f}, p={a_p:.4f}")
 
-- **Technology Acceptance Model** (Davis, 1989; Venkatesh and Davis, 2000) — perceived usefulness and ease of use as structural adoption predictors
-- **Financial Inclusion Literature** (Demirgüç-Kunt et al., 2022) — banking access and prior digital experience as enablers
-- **Behavioural Tax Compliance** (Allingham and Sandmo, 1972; Kleven et al., 2011; Slemrod, 2019) — tax anxiety as the specific channel through which the safe harbour provision operates
-- **Coordination Failure** (Jack and Suri, 2011) — mutual misperception between merchants and customers as a second binding constraint independent of tax anxiety
+    path_a_df = pd.DataFrame({
+        "Variable": Ma.model.exog_names,
+        "Coefficient": Ma.params.round(4),
+        "SE": Ma.bse.round(4),
+        "t": Ma.tvalues.round(3),
+        "p_value": Ma.pvalues.round(4),
+    })
+    path_a_df.to_csv(f"outputs/tables/08a_mediation_path_a_{mediator_col}.csv", index=False)
 
----
+    # PATH c: C3 → B1b (total effect probit, no mediator)
+    Xc = sm.add_constant(sub[["C3_safe_harbour_aware"] + CONTROLS])
+    Mc = Probit(sub["B1b_registered_binary"].astype(int), Xc).fit(disp=False, cov_type="HC1")
+    ame_c = Mc.get_margeff(at="mean")
+    c_ame = ame_c.margeff[CONTROLS.__len__() > -1 and
+                          list(Mc.model.exog_names[1:]).index("C3_safe_harbour_aware")]
+    # safer extraction
+    reg_names = list(Mc.model.exog_names[1:])  # drop 'const'
+    c3_idx = reg_names.index("C3_safe_harbour_aware")
+    c_ame = ame_c.margeff[c3_idx]
+    c_se = ame_c.margeff_se[c3_idx]
+    c_p = ame_c.pvalues[c3_idx]
+    print(f"Path c (C3 → B1b, total): AME={c_ame:.4f}, SE={c_se:.4f}, p={c_p:.4f}")
 
-## Survey Instrument
+    # PATH c' (direct): C3 → B1b with mediator included
+    Xcp = sm.add_constant(sub[["C3_safe_harbour_aware", mediator_col] + CONTROLS])
+    Mcp = Probit(sub["B1b_registered_binary"].astype(int), Xcp).fit(disp=False, cov_type="HC1")
+    ame_cp = Mcp.get_margeff(at="mean")
+    reg_names_cp = list(Mcp.model.exog_names[1:])
+    c3_idx_cp = reg_names_cp.index("C3_safe_harbour_aware")
+    med_idx_cp = reg_names_cp.index(mediator_col)
+    cp_ame = ame_cp.margeff[c3_idx_cp]
+    cp_se = ame_cp.margeff_se[c3_idx_cp]
+    cp_p = ame_cp.pvalues[c3_idx_cp]
+    b_ame = ame_cp.margeff[med_idx_cp]
+    b_se = ame_cp.margeff_se[med_idx_cp]
+    b_p = ame_cp.pvalues[med_idx_cp]
+    print(f"Path c' (C3 → B1b, direct): AME={cp_ame:.4f}, SE={cp_se:.4f}, p={cp_p:.4f}")
+    print(f"Path b ({mediator_col} → B1b | C3): AME={b_ame:.4f}, SE={b_se:.4f}, p={b_p:.4f}")
 
-The structured questionnaire contains **44 items** across six sections:
+    # Indirect effect (product of coefficients, delta method SE)
+    indirect = a_coef * b_ame
+    indirect_se_delta = np.sqrt((b_ame ** 2) * (a_se ** 2) + (a_coef ** 2) * (b_se ** 2))
+    print(f"\nIndirect effect (a × b): {indirect:.4f} (delta SE: {indirect_se_delta:.4f})")
 
-| Section | Items | Content |
-|---|---|---|
-| A | A1–A8 | Trader Profile |
-| B | B1a, B1b, B2–B6 | Current Digital Payment Status |
-| C | C1–C9 | Policy Awareness and Perceptions (includes 2 corrected knowledge-test items) |
-| D | D1–D12 | Adoption Barriers — Likert scale 1–5 (includes D11–D12 coordination wedge items) |
-| E | E1–E6 | Willingness to Adopt and Policy Preferences |
-| F | F1 | Open-Ended Item (AI-assisted qualitative coding) |
+    # Bootstrap CI for indirect effect
+    boot_indirect = []
+    for _ in range(N_BOOT):
+        idx = np.random.choice(len(sub), len(sub), replace=True)
+        boot_sub = sub.iloc[idx].reset_index(drop=True)
+        try:
+            Xa_b = sm.add_constant(boot_sub[["C3_safe_harbour_aware"] + CONTROLS])
+            Ma_b = sm.OLS(boot_sub[mediator_col].astype(float), Xa_b).fit()
+            a_b = Ma_b.params["C3_safe_harbour_aware"]
 
-**Key design features:**
-- **B1b** (formal QR registration) is the primary binary dependent variable, separated from B1a (display) to avoid definitional conflation
-- **C3** is a four-option multiple-choice knowledge test (not self-report) measuring safe harbour awareness without information contamination — KEY independent variable
-- **C9** is a knowledge test measuring awareness of the technical support and Rapid Dispute Resolution mandate
-- **D11–D12** measure the coordination wedge: trader estimates of customer digital payment demand and peer registration expectations
-- **F1** is an open-ended narrative item coded using AI-assisted qualitative analysis
+            Xcp_b = sm.add_constant(boot_sub[["C3_safe_harbour_aware", mediator_col] + CONTROLS])
+            Mcp_b = Probit(boot_sub["B1b_registered_binary"].astype(int), Xcp_b).fit(disp=False)
+            ame_b = Mcp_b.get_margeff(at="mean")
+            b_b = ame_b.margeff[list(Mcp_b.model.exog_names[1:]).index(mediator_col)]
+            boot_indirect.append(a_b * b_b)
+        except Exception:
+            continue
 
----
+    boot_indirect = np.array(boot_indirect)
+    ci_lower = np.percentile(boot_indirect, 2.5)
+    ci_upper = np.percentile(boot_indirect, 97.5)
+    mediation_significant = (ci_lower > 0) or (ci_upper < 0)
 
-## Analysis Plan
+    print(f"Bootstrap 95% CI for indirect effect: [{ci_lower:.4f}, {ci_upper:.4f}]")
+    print(f"Mediation supported (CI excludes 0): {mediation_significant}")
 
-All analysis is implemented in **Python 3.11** using open-source libraries:
+    proportion_mediated = indirect / c_ame if abs(c_ame) > 0.001 else np.nan
+    print(f"Proportion of total effect mediated: {proportion_mediated:.3f}")
 
-```
-statsmodels 0.14    — probit, ordered logit, OLS
-scikit-learn 1.4    — factor analysis (varimax rotation)
-scipy               — chi-square tests, mediation analysis
-pandas / numpy      — data management
-```
+    summary = {
+        "Mediator": mediator_label,
+        "Path_a_coef": round(a_coef, 4),
+        "Path_a_p": round(a_p, 4),
+        "Path_b_AME": round(b_ame, 4),
+        "Path_b_p": round(b_p, 4),
+        "Path_c_total_AME": round(c_ame, 4),
+        "Path_c_p": round(c_p, 4),
+        "Path_c_prime_direct_AME": round(cp_ame, 4),
+        "Path_c_prime_p": round(cp_p, 4),
+        "Indirect_effect": round(indirect, 4),
+        "Bootstrap_CI_lower": round(ci_lower, 4),
+        "Bootstrap_CI_upper": round(ci_upper, 4),
+        "Mediation_significant": mediation_significant,
+        "Proportion_mediated": round(proportion_mediated, 3) if not np.isnan(proportion_mediated) else np.nan,
+    }
+    return summary
 
-Ten pre-specified analytical steps:
 
-1. Descriptive statistics and frequency tables
-2. Safe harbour awareness cross-tabulations (chi-square)
-3. **Primary probit model** — DV: B1b (formal QR registration), Key IV: C3 (safe harbour awareness), market × vendor interaction terms, trader controls
-4. Factor analysis on D1–D10 barrier items (varimax, 4 factors)
-5. Probit with factor scores (multicollinearity reduction)
-6. **Ordered logit** — DV: E1 (willingness to adopt, 1–5) — robustness check
-7. Split-sample heterogeneity analysis by market type and vendor category
-8. **Mediation analysis** — C3 → tax anxiety (C4, D7) → B1b pathway
-9. **Coordination wedge analysis** — D11 and D12 in probit and ordered logit
-10. Policy simulation — adoption rates under full awareness and dual-intervention scenarios
+print("Step 8 — Mediation Analysis\n")
 
----
+summary_d7 = mediation_analysis(df, "D7_audit_fear", "Tax/Audit Fear Barrier (D7)")
+summary_c4 = mediation_analysis(df, "C4_tax_burden_belief", "Tax Burden Belief (C4)")
 
-## Repository Structure
+mediation_summary_df = pd.DataFrame([summary_d7, summary_c4])
+mediation_summary_df.to_csv("outputs/tables/08d_mediation_summary.csv", index=False)
+print("\nMediation summary saved.")
 
-```
-SME-Digital-Payment-Adoption-KP/
-│
-├── README.md                          ← This file
-│
-├── data/
-│   ├── codebook.md                    ← Variable definitions, scales, analytical roles
-│   └── data_dictionary.xlsx           ← Full codebook in Excel format
-│
-├── scripts/
-│   ├── 01_descriptives.py             ← Step 1-2: Descriptive stats and cross-tabs
-│   ├── 02_probit_primary.py           ← Step 3: Primary probit model
-│   ├── 03_factor_analysis.py          ← Step 4-5: Factor analysis and probit with factors
-│   ├── 04_ordered_logit.py            ← Step 6: Ordered logit robustness
-│   ├── 05_heterogeneity.py            ← Step 7: Split-sample analysis
-│   ├── 06_mediation.py                ← Step 8: Mediation analysis
-│   ├── 07_coordination_wedge.py       ← Step 9: D11-D12 coordination wedge
-│   └── 08_policy_simulation.py        ← Step 10: Policy scenarios
-│
-├── outputs/
-│   ├── tables/                        ← LaTeX and CSV result tables
-│   └── figures/                       ← Charts and visualisations
-│
-└── instrument/
-    └── questionnaire_v3.md            ← Survey instrument (44 items, plain text)
-```
 
-> **Note:** Raw survey data is not uploaded to this repository in compliance with respondent privacy obligations and the study's ethics protocol. The cleaned analysis dataset (no names, phone numbers, shop names, or addresses) will be made available upon journal acceptance. All replication code will be deposited here upon journal submission.
+# ============================================================
+# FIGURE 8  Mediation path diagram
+# ============================================================
 
----
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 5)
+ax.axis("off")
 
-## Data Privacy Statement
+# Boxes
+boxes = {
+    "C3": (1.5, 2.5),
+    "MEDIAT": (5.0, 4.0),
+    "B1b": (8.5, 2.5),
+}
+box_labels = {
+    "C3": "C3\nSafe Harbour\nAwareness",
+    "MEDIAT": "Tax Anxiety\n(D7 Audit Fear)",
+    "B1b": "B1b\nFormal QR\nRegistration",
+}
+for key, (x, y) in boxes.items():
+    ax.add_patch(mpatches.FancyBboxPatch((x - 1.0, y - 0.55), 2.0, 1.1,
+                 boxstyle="round,pad=0.1",
+                 facecolor="#EBF3FB" if key != "MEDIAT" else "#FEF3E2",
+                 edgecolor="#2D6A9F" if key != "MEDIAT" else "#E87722",
+                 linewidth=2))
+    ax.text(x, y, box_labels[key], ha="center", va="center",
+            fontsize=10, fontweight="bold",
+            color="#2D6A9F" if key != "MEDIAT" else "#E87722")
 
-This study involves human subjects. All respondents provided verbal informed consent. No personally identifying information was recorded on survey forms. Business revenue was collected in categorical bands. Contact numbers from follow-up consent are stored separately and never linked to the questionnaire data. The analysis dataset contains no names, phone numbers, shop names, or addresses.
+# Arrows
+arrow_kw = dict(arrowstyle="-|>", color="#555555", lw=1.5,
+                connectionstyle="arc3,rad=0.0")
 
----
+# C3 → Mediator (path a)
+ax.annotate("", xy=(4.0, 3.8), xytext=(2.5, 3.1),
+            arrowprops=dict(**arrow_kw))
+a_text = f"a = {summary_d7['Path_a_coef']:.3f}\np = {summary_d7['Path_a_p']:.3f}"
+ax.text(3.2, 3.7, a_text, ha="center", va="center", fontsize=9, color="#E87722")
 
-## Related Repositories
+# Mediator → B1b (path b)
+ax.annotate("", xy=(7.5, 3.1), xytext=(6.0, 3.8),
+            arrowprops=dict(**arrow_kw))
+b_text = f"b = {summary_d7['Path_b_AME']:.3f}\np = {summary_d7['Path_b_p']:.3f}"
+ax.text(6.9, 3.7, b_text, ha="center", va="center", fontsize=9, color="#E87722")
 
-| Repository | Description |
-|---|---|
-| [Stockmarket-Sentiment-Analysis](https://github.com/DrYasirSaeed/Stockmarket-Sentiment-Analysis) | FinBERT-based NLP pipeline for KSE-100 macroeconomic news sentiment |
-| [Shariah-Complaince-Research](https://github.com/DrYasirSaeed/Shariah-Complaince-Research) | Shariah screening compliance and firm profitability, PSX-listed firms |
+# C3 → B1b direct (path c')
+ax.annotate("", xy=(7.5, 2.5), xytext=(2.5, 2.5),
+            arrowprops=dict(arrowstyle="-|>", color="#2D6A9F", lw=2.0,
+                            connectionstyle="arc3,rad=0.0"))
+c_text = f"c' (direct) = {summary_d7['Path_c_prime_direct_AME']:.3f}\nc (total) = {summary_d7['Path_c_total_AME']:.3f}"
+ax.text(5.0, 2.1, c_text, ha="center", va="center", fontsize=9, color="#2D6A9F")
 
----
+# Indirect effect label
+indirect_text = (
+    f"Indirect (a×b) = {summary_d7['Indirect_effect']:.4f}\n"
+    f"95% Boot CI [{summary_d7['Bootstrap_CI_lower']:.4f}, {summary_d7['Bootstrap_CI_upper']:.4f}]"
+)
+ax.text(5.0, 0.6, indirect_text, ha="center", va="center", fontsize=9.5,
+        style="italic",
+        bbox=dict(boxstyle="round", facecolor="#F0FFF4", edgecolor="#3BAA75", alpha=0.9))
 
-## Citation
-
-If you use the code or instrument from this repository, please cite:
-
-```
-Saeed, Y. (2026). Digital Payment Mandates and SME Financial Inclusion:
-Evidence from the Cashless Khyber Pakhtunkhwa Initiative.
-Working Paper. Department of Economics, KUST, Kohat.
-GitHub: https://github.com/DrYasirSaeed/SME-Digital-Payment-Adoption-KP
-```
-
----
-
-## Status
-
-| Component | Status |
-|---|---|
-| Survey instrument (v3, 44 items) | ✅ Complete |
-| Codebook and data dictionary | ✅ Complete |
-| Analysis scripts (tested on hypothetical data) | ✅ Complete |
-| ORIC grant application | ✅ Submitted |
-| EIRB presentation | 🔄 Scheduled June 4, 2026 |
-| Field data collection | ⏳ Pending grant award |
-| Journal submission | ⏳ Pending field data |
-
----
-
-*Department of Economics, Kohat University of Science and Technology (KUST)*
-*KUST ORIC Research Grant 2025–26*
+ax.set_title("Mediation Analysis: Safe Harbour Awareness → Tax Anxiety → QR Registration\n"
+             "Kohat District Survey — Hypothetical Data", fontsize=11, y=0.98)
+plt.tight_layout()
+plt.savefig("outputs/figures/08_mediation_diagram.png", dpi=150)
+plt.close()
+print("Figure 8 saved.\nStep 8 complete.\n")
