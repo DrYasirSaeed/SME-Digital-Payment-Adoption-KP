@@ -1,1 +1,0 @@
-# SME-Digital-Payment-Adoption-KP
